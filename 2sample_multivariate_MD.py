@@ -1,7 +1,7 @@
 """
 A python script in implementing a 2-sample, multivariate Mahalanobis Distance signifiance test. 
 
-Written by: Haiyang S. Wang
+Written by: Haiyang S. Wang, ETH Zurich / University of Copenhagen
 Date: 25-04-2024
 
 References: 
@@ -11,7 +11,7 @@ Mardia, K. V., Kent, J. T., & Bibby, J. M. 1979, in Probability and Mathematical
 Statistics, ed. Z. W. Birnbaum & E. Lukacs (London: Academic Press), 124
 
 https://online.stat.psu.edu/stat505/lesson/4/4.3
-""
+"""
 
 import numpy as np
 import scipy.stats as stats
@@ -25,6 +25,9 @@ def mahalanobis_2sample_multivariate(arr1, arr2, arr1_err=None, arr2_err=None, p
     alpha -- the statistical level (0.05, by default) of the critical statistic and the p-value of the test statistic
     pooled -- pool the covariance of the two samples or not (recommended to be 'pooled', by default)
     silence -- auto printing test results or not ('False', by default)
+
+    Written by: Haiyang S. Wang, ETH Zurich / University of Copenhagen
+    Date: 25-04-2024
     """
     
     ##retireve the sizes of the input samples
